@@ -2,7 +2,8 @@
 Customer Churn Prediction
 
 
-📉 End-to-End Customer Churn Prediction System
+#📉 End-to-End Customer Churn Prediction System
+
 A production-grade Machine Learning system that predicts customer churn. This project demonstrates a full-stack MLOps lifecycle: from data engineering and model training to containerized deployment and data drift monitoring.
 
 Live Demo: [Link to your Render URL here]
@@ -39,7 +40,7 @@ Orchestration: GitHub Actions (CI/CD)
 
 Monitoring: Evidently AI
 
-📂 Project Structure
+#📂 Project Structure
 Bash
 
 ├── .github/workflows
@@ -51,6 +52,7 @@ Bash
 ├── Dockerfile           # Docker image definition
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
+
 🚀 Getting Started
 Option 1: Run with Docker (Recommended)
 Pull the image:
