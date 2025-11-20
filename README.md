@@ -4,17 +4,17 @@
 
 A production-grade Machine Learning system that predicts customer churn. This project demonstrates a full-stack MLOps lifecycle: from data engineering and model training to containerized deployment and data drift monitoring.
 
-## Live Demo: [Link to your Render URL here]
+**Live Demo**: [Link to your Render URL here]
 
-## Docker Hub: [Link to your Docker Hub Repo here]
+**Docker Hub**: [Link to your Docker Hub Repo here]
 
 ## 🏗️ Architecture
 
 The system is built using a modular architecture, ensuring scalability and reproducibility.
 
-- **Data: Telco Customer Churn dataset (IBM).
+- **Data**: Telco Customer Churn dataset (IBM).
 
-- **Training: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
+- **Training**: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
 
 - **Serving: FastAPI for real-time inference.
 
@@ -40,6 +40,8 @@ The system is built using a modular architecture, ensuring scalability and repro
 
 ## 📂 Project Structure
 
+```
+
 ├── .github/workflows
 │   └── deploy.yml       # CI/CD Pipeline configuration
 ├── app.py               # FastAPI application (Inference)
@@ -50,19 +52,22 @@ The system is built using a modular architecture, ensuring scalability and repro
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
 
+```
+
 ## 🚀 Getting Started
 
-Option 1: Run with Docker (Recommended)
+**Option 1**: Run with Docker (Recommended)
+
 Pull the image:
 
-docker pull <your-username>/churn-predictor:latest
+- docker pull <your-username>/churn-predictor:latest
 
 Run the container:
 
-docker run -p 8000:8000 <your-username>/churn-predictor:latest
-Access the API: Open your browser to http://localhost:8000/docs to see the Swagger UI.
+- docker run -p 8000:8000 <your-username>/churn-predictor:latest
+- Access the API: Open your browser to http://localhost:8000/docs to see the Swagger UI.
 
-## Option 2: Run Locally
+**Option 2**: Run Locally
 
 Clone the repo:
 
@@ -77,11 +82,11 @@ Train the model:
 
 - python train.py
 - 
-## Output: Model trained and saved as model.joblib
+## Output: Model trained and saved as model. joblib
 
 Start the server:
 
-- uvicorn app:app --reload
+- uvicorn app: app --reload
   
 ## 🔌 API Usage
 
@@ -92,6 +97,7 @@ Endpoint: POST /predict
 Example Request:
 
 JSON
+```
 
 {
   "gender": "Female",
@@ -115,26 +121,30 @@ JSON
   "TotalCharges": 29.85
 }
 
+```
+
 Example Response:
 
 JSON
+```
 
 {
   "prediction": "No Churn",
   "churn_probability": "14.5%"
 }
+```
 
 ### 📊 Monitoring & Observability
 
 To ensure model reliability in production, this project uses Evidently AI to detect data drift.
 
-- **Logging: The API logs all incoming requests to production_logs.csv.
+- **Logging**: The API logs all incoming requests to production_logs.csv.
 
-- **Drift Check: Run the monitoring script to compare production data vs. training data.
+- **Drift Check**: Run the monitoring script to compare production data vs. training data.
 
-python monitor_drift.py
+- python monitor_drift.py
 
-Sample Drift Report:
+## Sample Drift Report:
 
 [Insert a screenshot of your evidently html report here]
 
@@ -142,12 +152,34 @@ Sample Drift Report:
 
 This project uses GitHub Actions for continuous integration and deployment:
 
-- **Push to Main: Triggers the pipeline.
+- **Push to Main**: Triggers the pipeline.
 
-- **Build: Sets up Python environment and installs dependencies.
+- **Build**: Sets up Python environment and installs dependencies.
 
-- **Train: Runs train.py to ensure the model is retrained on the latest code/data.
+- **Train**: Runs train.py to ensure the model is retrained on the latest code/data.
 
-- **Containerize: Builds a new Docker image.
+- **Containerize**: Builds a new Docker image.
 
-- **Deploy: Pushes the image to Docker Hub and triggers a redeploy on Render.
+- **Deploy**: Pushes the image to Docker Hub and triggers a redeploy on Render.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature-name`
+5. Submit a pull request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. Review the documentation
+2. Create an issue on GitHub
+
+
+
