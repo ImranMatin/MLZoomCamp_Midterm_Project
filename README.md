@@ -1,6 +1,4 @@
-# MLZoomCamp_Midterm_Project
-
-## 📉 End-to-End Customer Churn Prediction System
+# 📉 End-to-End Customer Churn Prediction System
 
 A production-grade Machine Learning system that predicts customer churn. This project demonstrates a full-stack MLOps lifecycle: from data engineering and model training to containerized deployment and data drift monitoring.
 
@@ -196,3 +194,6 @@ If you encounter any issues or have questions:
 1. Review the documentation
 2. Create an issue on GitHub
 
+---
+
+⭐ If you found this project helpful, please give it a star on GitHub!
