@@ -16,27 +16,27 @@ The system is built using a modular architecture, ensuring scalability and repro
 
 - **Training**: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
 
-- **Serving: FastAPI for real-time inference.
+- **Serving**: FastAPI for real-time inference.
 
-- **Deployment: Docker container deployed to Render Cloud.
+- **Deployment**: Docker container deployed to Render Cloud.
 
-- **CI/CD: GitHub Actions triggers automated training and deployment on every push.
+- **CI/CD**: GitHub Actions triggers automated training and deployment on every push.
 
-- **Monitoring: Evidently, AI checks for data drift between training and production data.
+- **Monitoring**: Evidently, AI checks for data drift between training and production data.
 
 ## 🛠️ Tech Stack
 
-- **Language: Python 3.9
+- **Language**: Python 3.9+
 
-- **ML Libraries: Scikit-learn, Pandas, Numpy, Joblib
+- **ML Libraries**: Scikit-learn, Pandas, Numpy, Joblib
 
-- **API Framework: FastAPI, Uvicorn
+- **API Framework**: FastAPI, Uvicorn
 
-- **Containerization: Docker
+- **Containerization**: Docker
 
-- **Orchestration: GitHub Actions (CI/CD)
+- **Orchestration**: GitHub Actions (CI/CD)
 
-- **Monitoring: Evidently AI
+- **Monitoring**: Evidently AI
 
 ## 📂 Project Structure
 
@@ -69,19 +69,31 @@ Run the container:
 
 **Option 2**: Run Locally
 
-Clone the repo:
+1. Clone the repository:
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
 
-- git clone https://github.com/<your-username>/<your-repo>.git
-- cd <your-repo>
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-Install dependencies:
+3. Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-- pip install -r requirements.txt
+4. Set up environment variables:
+```bash
+cp .env.example .env
+```
 
 Train the model:
 
 - python train.py
-- 
+  
 ## Output: Model trained and saved as model. joblib
 
 Start the server:
