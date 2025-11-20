@@ -1,47 +1,44 @@
 # MLZoomCamp_Midterm_Project
-Customer Churn Prediction
 
-
-#📉 End-to-End Customer Churn Prediction System
+## 📉 End-to-End Customer Churn Prediction System
 
 A production-grade Machine Learning system that predicts customer churn. This project demonstrates a full-stack MLOps lifecycle: from data engineering and model training to containerized deployment and data drift monitoring.
 
-Live Demo: [Link to your Render URL here]
+# Live Demo: [Link to your Render URL here]
 
-Docker Hub: [Link to your Docker Hub Repo here]
+# Docker Hub: [Link to your Docker Hub Repo here]
 
-🏗️ Architecture
-The system is built using a modular architecture ensuring scalability and reproducibility.
+## 🏗️ Architecture
 
-Shutterstock
+The system is built using a modular architecture, ensuring scalability and reproducibility.
 
-Data: Telco Customer Churn dataset (IBM).
+- Data: Telco Customer Churn dataset (IBM).
 
-Training: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
+- Training: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
 
-Serving: FastAPI for real-time inference.
+- Serving: FastAPI for real-time inference.
 
-Deployment: Docker container deployed to Render Cloud.
+- Deployment: Docker container deployed to Render Cloud.
 
-CI/CD: GitHub Actions triggers automated training and deployment on every push.
+- CI/CD: GitHub Actions triggers automated training and deployment on every push.
 
-Monitoring: Evidently AI checks for data drift between training and production data.
+- Monitoring: Evidently, AI checks for data drift between training and production data.
 
-🛠️ Tech Stack
-Language: Python 3.9
+## 🛠️ Tech Stack
 
-ML Libraries: Scikit-learn, Pandas, Numpy, Joblib
+- Language: Python 3.9
 
-API Framework: FastAPI, Uvicorn
+- ML Libraries: Scikit-learn, Pandas, Numpy, Joblib
 
-Containerization: Docker
+- API Framework: FastAPI, Uvicorn
 
-Orchestration: GitHub Actions (CI/CD)
+- Containerization: Docker
 
-Monitoring: Evidently AI
+- Orchestration: GitHub Actions (CI/CD)
 
-#📂 Project Structure
-Bash
+- Monitoring: Evidently AI
+
+## 📂 Project Structure
 
 ├── .github/workflows
 │   └── deploy.yml       # CI/CD Pipeline configuration
@@ -53,45 +50,38 @@ Bash
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
 
-🚀 Getting Started
+## 🚀 Getting Started
+
 Option 1: Run with Docker (Recommended)
 Pull the image:
-
-Bash
 
 docker pull <your-username>/churn-predictor:latest
 
 Run the container:
 
-Bash
-
 docker run -p 8000:8000 <your-username>/churn-predictor:latest
 Access the API: Open your browser to http://localhost:8000/docs to see the Swagger UI.
 
-Option 2: Run Locally
-Clone the repo:
+## Option 2: Run Locally
 
-Bash
+Clone the repo:
 
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
 Install dependencies:
 
-Bash
-
 pip install -r requirements.txt
 Train the model:
 
-Bash
-
 python train.py
-# Output: Model trained and saved as model.joblib
+## Output: Model trained and saved as model.joblib
+
 Start the server:
 
-Bash
+- uvicorn app:app --reload
+  
+## 🔌 API Usage
 
-uvicorn app:app --reload
-🔌 API Usage
 The API accepts customer data and returns a Churn prediction (Yes/No) and a Probability score.
 
 Endpoint: POST /predict
