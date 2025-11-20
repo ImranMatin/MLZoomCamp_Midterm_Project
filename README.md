@@ -59,13 +59,15 @@ The system is built using a modular architecture, ensuring scalability and repro
 **Option 1**: Run with Docker (Recommended)
 
 Pull the image:
-
-- docker pull <your-username>/churn-predictor:latest
+```bash
+docker pull <your-username>/churn-predictor:latest
+```
 
 Run the container:
-
+```bash
 - docker run -p 8000:8000 <your-username>/churn-predictor:latest
 - Access the API: Open your browser to http://localhost:8000/docs to see the Swagger UI.
+```
 
 **Option 2**: Run Locally
 
@@ -79,6 +81,7 @@ cd <your-repo>
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
 3. Install Python dependencies:
 ```bash
@@ -91,14 +94,16 @@ cp .env.example .env
 ```
 
 Train the model:
-
-- python train.py
-  
+```bash
+python train.py
+```
+ 
 ## Output: Model trained and saved as model. joblib
 
 Start the server:
-
-- uvicorn app: app --reload
+```bash
+uvicorn app: app --reload
+```
   
 ## 🔌 API Usage
 
@@ -108,7 +113,6 @@ Endpoint: POST /predict
 
 Example Request:
 
-JSON
 ```
 
 {
@@ -137,7 +141,6 @@ JSON
 
 Example Response:
 
-JSON
 ```
 
 {
@@ -192,6 +195,4 @@ If you encounter any issues or have questions:
 
 1. Review the documentation
 2. Create an issue on GitHub
-
-
 
