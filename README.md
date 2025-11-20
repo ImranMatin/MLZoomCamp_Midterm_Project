@@ -4,39 +4,39 @@
 
 A production-grade Machine Learning system that predicts customer churn. This project demonstrates a full-stack MLOps lifecycle: from data engineering and model training to containerized deployment and data drift monitoring.
 
-# Live Demo: [Link to your Render URL here]
+## Live Demo: [Link to your Render URL here]
 
-# Docker Hub: [Link to your Docker Hub Repo here]
+## Docker Hub: [Link to your Docker Hub Repo here]
 
 ## 🏗️ Architecture
 
 The system is built using a modular architecture, ensuring scalability and reproducibility.
 
-- Data: Telco Customer Churn dataset (IBM).
+- **Data: Telco Customer Churn dataset (IBM).
 
-- Training: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
+- **Training: Scikit-Learn Pipeline (Random Forest) with automated preprocessing.
 
-- Serving: FastAPI for real-time inference.
+- **Serving: FastAPI for real-time inference.
 
-- Deployment: Docker container deployed to Render Cloud.
+- **Deployment: Docker container deployed to Render Cloud.
 
-- CI/CD: GitHub Actions triggers automated training and deployment on every push.
+- **CI/CD: GitHub Actions triggers automated training and deployment on every push.
 
-- Monitoring: Evidently, AI checks for data drift between training and production data.
+- **Monitoring: Evidently, AI checks for data drift between training and production data.
 
 ## 🛠️ Tech Stack
 
-- Language: Python 3.9
+- **Language: Python 3.9
 
-- ML Libraries: Scikit-learn, Pandas, Numpy, Joblib
+- **ML Libraries: Scikit-learn, Pandas, Numpy, Joblib
 
-- API Framework: FastAPI, Uvicorn
+- **API Framework: FastAPI, Uvicorn
 
-- Containerization: Docker
+- **Containerization: Docker
 
-- Orchestration: GitHub Actions (CI/CD)
+- **Orchestration: GitHub Actions (CI/CD)
 
-- Monitoring: Evidently AI
+- **Monitoring: Evidently AI
 
 ## 📂 Project Structure
 
@@ -66,14 +66,17 @@ Access the API: Open your browser to http://localhost:8000/docs to see the Swagg
 
 Clone the repo:
 
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+- git clone https://github.com/<your-username>/<your-repo>.git
+- cd <your-repo>
+
 Install dependencies:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
+
 Train the model:
 
-python train.py
+- python train.py
+- 
 ## Output: Model trained and saved as model.joblib
 
 Start the server:
@@ -111,6 +114,7 @@ JSON
   "MonthlyCharges": 29.85,
   "TotalCharges": 29.85
 }
+
 Example Response:
 
 JSON
@@ -119,29 +123,31 @@ JSON
   "prediction": "No Churn",
   "churn_probability": "14.5%"
 }
-📊 Monitoring & Observability
+
+### 📊 Monitoring & Observability
+
 To ensure model reliability in production, this project uses Evidently AI to detect data drift.
 
-Logging: The API logs all incoming requests to production_logs.csv.
+- **Logging: The API logs all incoming requests to production_logs.csv.
 
-Drift Check: Run the monitoring script to compare production data vs. training data.
-
-Bash
+- **Drift Check: Run the monitoring script to compare production data vs. training data.
 
 python monitor_drift.py
+
 Sample Drift Report:
 
 [Insert a screenshot of your evidently html report here]
 
-🔄 CI/CD Pipeline
+### 🔄 CI/CD Pipeline
+
 This project uses GitHub Actions for continuous integration and deployment:
 
-Push to Main: Triggers the pipeline.
+- **Push to Main: Triggers the pipeline.
 
-Build: Sets up Python environment and installs dependencies.
+- **Build: Sets up Python environment and installs dependencies.
 
-Train: Runs train.py to ensure the model is retrained on the latest code/data.
+- **Train: Runs train.py to ensure the model is retrained on the latest code/data.
 
-Containerize: Builds a new Docker image.
+- **Containerize: Builds a new Docker image.
 
-Deploy: Pushes the image to Docker Hub and triggers a redeploy on Render.
+- **Deploy: Pushes the image to Docker Hub and triggers a redeploy on Render.
